@@ -6,7 +6,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Barbershop</title>
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/app.min.css">
 	<link rel='shortcut icon' href='images/dest/favicon.ico' type='image/x-icon'>
  
@@ -17,30 +16,30 @@
 		<div class="header">
 			<div class="header-top">
 				<div class="header-top__container">
-					<div class="header-top__top">
-						<div class="header-top__navigation">
+					<div class="header-top__row">
+						<div class="header-top__col-75">
 							<ul class="header-top__list">
 								<li class="header-top__item promoted">
-									<a href="#" class="header-top__link">ГЛАВНАЯ</a>
+									<a href="#" class="header__link">ГЛАВНАЯ</a>
 								</li>
 								<li class="header-top__item promoted">
-									<a href="#" class="header-top__link">ИНФОРМАЦИЯ</a>
+									<a href="#" class="header__link">ИНФОРМАЦИЯ</a>
 								</li>
 								<li class="header-top__item promoted">
-									<a href="#" class="header-top__link">НОВОСТИ</a>
+									<a href="#" class="header__link">НОВОСТИ</a>
 								</li>
 								<li class="header-top__item promoted">
-									<a href="#" class="header-top__link">ПРАЙС-ЛИСТ</a>
+									<a href="#" class="header__link">ПРАЙС-ЛИСТ</a>
 								</li>
 								<li class="header-top__item promoted">
-									<a href="#" class="header-top__link">МАГАЗИН</a>
+									<a href="#" class="header__link">МАГАЗИН</a>
 								</li>
 								<li class="header-top__item promoted">
-									<a href="#" class="header-top__link">КОНТАКТЫ</a>
+									<a href="#" class="header__link">КОНТАКТЫ</a>
 								</li>
 							</ul>
 						</div>
-						<div class="header-top__login">
+						<div class="header-top__col-25">
 							<img src="images/dest/icon-login.png" alt="">
 							<div class="header-top__entrance">ВХОД</div>
 						</div>
@@ -102,25 +101,30 @@
 							<a href="news.html" class='btn__large'>Новости</a>
 						</div>
 						<div class="col--50">
-							
+							<h4 class="title--30">ФОТОГАЛЕРЕЯ</h4>
 							<div class="infoBlock_gallery">
-								<h4 class="title--30">ФОТОГАЛЕРЕЯ</h4>
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
-									   <div class="swiper-slide">
+										<div class="swiper-slide">
 											<img src="images/dest/layer-21.jpg" alt="">
-									   </div>
-									   <div class="swiper-slide">
-											<img src="images/dest/layer-22.jpg" alt="">
-									   </div>
-									   <div class="swiper-slide">
-											<img src="images/dest/layer-23.jpg" alt="">
-									   </div>
+										</div>
+										<div class="swiper-slide">
+											<img src="images/banner2.jpg" alt="banner">
+										</div>
+										<div class="swiper-slide">
+											<img src="images/banner3.jpg" alt="banner">
+										</div>
+										
 									</div>
+									<!-- If we need pagination -->
 									<div class="swiper-pagination"></div>
-									<div class="swiper-button-prev"><a href="news.html" class='btn__large'>Назад</a></div>
-									<div class="swiper-button-next"><a href="news.html" class='btn__large'>Вперед</a></div>
+					
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+					
 								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -128,7 +132,8 @@
 				</div>
 			</div>
 	</div>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/jquery.3.5.1.min.js"></script>
 	<script src="js/app.min.js"></script>
+
 </body>
 </html>

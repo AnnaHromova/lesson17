@@ -36,3 +36,17 @@ a {
    padding: 0 10px;
    margin: 0 auto;
 }
+
+.row {
+   display: flex;
+}
+
+.col {
+   flex-grow: 1;
+   width: 100%;
+
+   &--50 {
+      @extend .col;
+      width: 50%;
+   }
+}

@@ -1,15 +1,10 @@
-.header {
-   max-width: 960px;
-   margin: 0 auto;
-}
-
 .header-top {
    &__container {
 position: relative;
    }
 
-   &__row {
-      background: #000;
+   &__top {
+      background: $black;
       height: 72px;
       display: flex;
       width: 1200px;
@@ -23,7 +18,12 @@ position: relative;
    }
 
 
-   &__col-25 {
+   &__link {
+      color: $white;
+      font-size: 16px;
+      }
+
+   &__login {
    width: 25%;
    flex-direction: row;
    display: flex;
@@ -38,7 +38,7 @@ position: relative;
    }
 
    a {
-      border-bottom: 4px solid #000;
+      border-bottom: 4px solid $black;
       padding: 22px 0;
    }
 
@@ -48,7 +48,7 @@ position: relative;
       padding: 22px 0;
    }
 
-   &__col-75 {
+   &__navigation {
    width: 75%;
    }
 
@@ -59,22 +59,23 @@ position: relative;
    }
 
    &__entrance {
-   color: #fff;
+   color: $white;
    padding: 0 0 0 10px;
    }
 }
 
+
 .header {
-   &__link {
-   color: #fff;
-   font-size: 16px;
-   }
+   max-width: 960px;
+   margin: 0 auto;
+
    &__info {
-      padding: 130px 0 0 0;
+   padding: 130px 0 0 0;
    }
 
    &__row {
    display: flex;
+   margin: 0 0 85px 0;
    }
 
    &__column {
@@ -84,17 +85,16 @@ position: relative;
    align-items: center;
    justify-content: center;
    }
-}
 
-.logo {
+   .logo {
    text-align: center;
+   }
 }
-
 
 
 .item-header {
    &__title {
-   color: #f7f4f1;
+   color: $white;
    font-size: 30px;
    text-align: center;
    justify-content: center;
@@ -108,9 +108,63 @@ position: relative;
    }
 
    &__text {
-   color: #f7f4f1;
+   color: $white;
    font-size: 14px;
    text-align: center;
    margin: 23px 0 0 0;
    }
+}
+
+
+@media (max-width: 992px) {
+   .header-top__top{  
+   right: -207px;
+   }
+
+   .header-top .promoted {
+      padding: 0 23px;
+   }
+
+   .header-top__navigation {
+   width: 85%;
+   }
+
+   .header-top__login {
+   width: 15%;
+   padding: 0 120px 0 0;
+   }
+}
+
+@media (max-width: 805px) {
+   .header__column {
+      padding: 0 5px;
+   }
+}
+
+@media (max-width: 758px) {
+
+   .item-header {
+      padding: 8px 34px;
+   }
+
+   .item-header__title {
+      font-size: 27px;
+   }
+
+   .item-header__icon {
+      width: 25px;
+      height: 25px;
+      margin: 0 299px;
+   }
+
+   .item-header__text {
+      font-size: 12px;
+      margin: 13px 0 0 0;
+   }
+
+   .header__row {
+      flex-direction: column;
+   }
+
+
 }
