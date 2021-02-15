@@ -1,11 +1,68 @@
 .infoBlock_gallery {
    padding: 0 0 0 90px;
 
+   @include _960 {
+      margin-left: -48px;
+   }
+   @include _663 {
+      margin-left: -67px;
+   }
+   @include _480 {
+      margin-left: -81px;
+   }
+
+   .swiper-container-pointer-events {
+      padding: 20px 0;
+   }
+
    .swiper-button-next,
    .swiper-button-prev {
       position: static;
+      color: $light_bg;
+
+      @include _960 {
+         position: absolute;
+      }
    }
    .swiper-button-next {
-      padding: 20px;
+      padding: 0 0 0 241px;
+      @include _960 {
+         margin: 60px 232px 0 0;
+      }
+      @include _663 {
+         margin: 60px 112px 0 0;
+      }
+      @include _480 {
+         margin: 60px 53px 0 0;
+      }
+   }
+
+   .swiper-button-prev {
+      padding: 76px 0px 0 82px;
+      @include _960 {
+         padding: 104px 0 0 249px;
+      }
+      @include _663 {
+         padding: 104px 0 0 132px;
+      }
+      @include _480 {
+         padding: 104px 0 0 74px;
+      }
+   }
+
+   .swiper-container btn {
+      padding: 50px;
+   }
+
+   .nav {
+      @include _960 {
+         height: 95px;
+      }
+   }
+
+   .btn__large {
+      @include _760 {
+         min-width: 80px;
+      }
    }
 }

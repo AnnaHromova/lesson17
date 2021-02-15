@@ -1,20 +1,69 @@
 .infoBlock {
    position: relative;
+   padding: 0 0 34px 0;
+   @include _505 {
+      padding: 0 0 3px 0;
+   }
 
+   .row {
+      @include _960 {
+         flex-direction: column;
+      }
+      @include _845 {
+         margin: 10px;
+      }
+   }
 
    &__container {
       background: $light_bg;
       max-width: 940px;
       margin: 0 auto;
       padding: 52px 80px 54px;
+      @include _960 {
+         margin-left: 107px;
+         width: 100%;
+      }
+      @include _845 {
+         padding: 10px 5px;
+      }
+      @include _650 {
+         padding: 1px 5px;
+      }
    }
 
    .col--50 {
-
+      @include _960 {
+         margin: 40px 0;
+         text-align: center;
+         width: 100%;
+      }
+      @include _760 {
+         margin: 18px 0;
+      }
       &:first-child {
          margin-right: 90px;
+         text-align: center;
+         @include _960 {
+            margin-right: 0;
+         }
       }
 
+      &:last-child {
+         margin-left: 90px;
+         @include _960 {
+            margin-left: 0;
+         }
+      }
+   }
+
+   .col--51 {
+      @include _960 {
+         text-align: center;
+         margin: 33px 0 100px;
+      }
+      @include _760 {
+         margin: 33px 0 10px;
+      }
    }
 
    &__divider {
@@ -23,10 +72,44 @@
       top: 50%;
       transform: translate(-50%, -50%);
       height: 64%;
+      @include _960 {
+         transform: rotate(90deg);
+         left: 61%;
+         top: 15%;
+      }
+      @include _760 {
+         display: none;
+      }
    }
 
    .title--30 {
-      margin: 0 0 30px;
+      margin: 0px -21px 30px 0px;
+      @include _960 {
+         font-size: 26px;
+         margin: 0 0 15px 0;
+      }
+      @include _845 {
+         font-size: 22px;
+      }
+      @include _760 {
+         font-size: 20px;
+      }
+      @include _505 {
+         font-size: 18px;
+         margin: 0 0 2px 0;
+      }
+   }
+
+   &__text {
+      @include _845 {
+         font-size: 12px;
+      }
+      @include _760 {
+         font-size: 11px;
+      }
+      @include _505 {
+         font-size: 9px;
+      }
    }
 
    &__date {
@@ -36,10 +119,67 @@
       line-height: 1;
       font-weight: 400;
       text-transform: lowercase;
+      @include _845 {
+         font-size: 11px;
+      }
+      @include _760 {
+         font-size: 9px;
+      }
+      @include _505 {
+         font-size: 8px;
+      }
    }
 
    &__box {
       margin-bottom: 35px;
+      @include _960 {
+         margin-bottom: 14px;
+      }
    }
 
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 0 0 0;
+      @include _960 {
+         justify-content: space-evenly;
+      }
+
+      @include _505 {
+         padding: 2px 0 0 0;
+      }
+   }
+
+   &__submit {
+      padding: 15px 0 0 0;
+   }
+}
+
+.holder {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @include _960 {
+      justify-content: space-evenly;
+   }
+
+   &__column {
+      background: $light_bg;
+      padding: 0 0 20px;
+      max-height: 50%;
+      max-width: 140px;
+      justify-content: center;
+      align-items: center;
+
+      &:last-child {
+         text-align: right;
+         text-decoration: underline;
+      }
+   }
+}
+
+.form {
+   .holder-submit {
+      padding: 20px 0 0 0;
+   }
 }

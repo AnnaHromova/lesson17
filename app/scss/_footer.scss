@@ -1,0 +1,106 @@
+.footer {
+   background: $footer_bg;
+   height: 185px;
+   margin: 30px 0 0 0;
+   @include _650 {
+      height: 143px;
+   }
+
+   &__container {
+      max-width: 960px;
+      padding: 0 10px;
+      margin: 0 auto;
+      @include _960 {
+         margin-left: 106px;
+         margin-right: -107px;
+         background: $footer_bg;
+         height: 185px;
+      }
+      @include _650 {
+         height: 143px;
+      }
+   }
+
+   &__row {
+      display: flex;
+      padding: 60px 0 5px;
+      @include _650 {
+         padding: 27px 0 5px;
+      }
+   }
+
+   &__col-33 {
+      width: 33.3%;
+   }
+
+   p,
+   a {
+      color: $white;
+      @include _845 {
+         font-size: 12px;
+      }
+      @include _650 {
+         font-size: 10px;
+      }
+      @include _505 {
+         font-size: 8px;
+      }
+   }
+
+   &__follow {
+      justify-content: center;
+      text-align: center;
+   }
+
+   &__socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   &__square {
+      margin: 3px;
+      width: 40px;
+      @include _650 {
+         width: 30px;
+      }
+      @include _505 {
+         width: 24px;
+      }
+   }
+
+   &__rectangle {
+      width: 140px;
+      height: 40px;
+      background: $black;
+      display: flex;
+      justify-content: center;
+      @include _650 {
+         width: 87px;
+         height: 30px;
+         display: block;
+      }
+      @include _505 {
+         height: 24px;
+         width: 75px;
+      }
+   }
+
+   &__disayn {
+      display: inline-block;
+
+      p {
+         padding: 0 25px;
+      }
+
+      a {
+         padding: 7px;
+      }
+   }
+
+   &__col-33 {
+      &:last-child {
+         text-align: right;
+      }
+   }
+}

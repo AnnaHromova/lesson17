@@ -1,6 +1,6 @@
 .header-top {
    &__container {
-position: relative;
+      position: relative;
    }
 
    &__top {
@@ -11,27 +11,44 @@ position: relative;
       align-items: center;
       position: absolute;
       right: -123px;
+
+      @include _960 {
+         right: -207px;
+      }
+      @include _760 {
+         background: none;
+      }
    }
 
    &__list {
-   padding: 0 0 0 150px;
+      padding: 0 0 0 150px;
+      @include _845 {
+         padding: 0 0 0 260px;
+      }
+      @include _760 {
+         display: none;
+      }
    }
-
 
    &__link {
       color: $white;
       font-size: 16px;
-      }
+   }
 
    &__login {
-   width: 25%;
-   flex-direction: row;
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   padding: 0 150px 0 0;
+      width: 25%;
+      flex-direction: row;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 150px 0 0;
+
+      @include _960 {
+         width: 15%;
+         padding: 0 120px 0 0;
+      }
    }
-   
+
    img {
       width: 18px;
       height: 15px;
@@ -42,129 +59,158 @@ position: relative;
       padding: 22px 0;
    }
 
-   a:hover { 
-      transition: width .3s ease-in-out;
+   a:hover {
+      transition: width 0.3s ease-in-out;
       border-bottom: 4px solid;
       padding: 22px 0;
    }
 
    &__navigation {
-   width: 75%;
+      width: 75%;
+
+      @include _960 {
+         width: 85%;
+      }
    }
 
    .promoted {
       display: inline-flex;
       vertical-align: top;
       padding: 0 23px;
+
+      @include _960 {
+         padding: 0 23px;
+      }
    }
 
    &__entrance {
-   color: $white;
-   padding: 0 0 0 10px;
+      color: $white;
+      padding: 0 0 0 10px;
    }
 }
-
 
 .header {
    max-width: 960px;
    margin: 0 auto;
+   @include _960 {
+      margin: 0 0 0 208px;
+   }
+
+   &__mobile_btn {
+      display: none;
+      @include _760 {
+         display: flex;
+         justify-content: center;
+         margin: 34px 0 0;
+      }
+   }
 
    &__info {
-   padding: 130px 0 0 0;
+      padding: 130px 0 0 0;
+      @include _760 {
+         padding: 44px 0 0 0;
+      }
    }
 
    &__row {
-   display: flex;
-   margin: 0 0 85px 0;
+      display: flex;
+      margin: 50px 0 85px 0;
+      @include _845 {
+         flex-direction: column;
+         margin: 2px 0 20px 0;
+      }
+      @include _505 {
+         flex-direction: column;
+         margin: 2px 0 5px 0;
+      }
    }
 
    &__column {
-   flex: 0 0 33.333%;
-   padding: 0 12px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+      flex: 0 0 33.333%;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include _845 {
+         margin: 15px 20px;
+      }
+      @include _760 {
+         margin: 3px 20px;
+      }
+
+      @include _650 {
+         margin: 2px 0;
+      }
    }
 
-   .logo {
-   text-align: center;
+   &__logo {
+      text-align: center;
+
+      @include _518 {
+         max-width: 300px;
+      }
    }
 }
-
 
 .item-header {
    &__title {
-   color: $white;
-   font-size: 30px;
-   text-align: center;
-   justify-content: center;
-   margin: 0 7px 23px 0;
+      color: $white;
+      font-size: 30px;
+      text-align: center;
+      justify-content: center;
+      margin: 0 0 23px 0;
+      @include _960 {
+         font-size: 26px;
+      }
+      @include _845 {
+         font-size: 22px;
+      }
+
+      @include _650 {
+         font-size: 18px;
+         margin: 8px 0 5px 0;
+      }
    }
 
    &__icon {
-   width: 30px;
-   height: 30px;
-   margin: 0 128px;
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      @include _845 {
+         width: 20px;
+         height: 20px;
+      }
+
+      @include _760 {
+         width: 15px;
+         height: 15px;
+      }
+
+      @include _480 {
+         width: 10px;
+         height: 10px;
+      }
    }
 
    &__text {
-   color: $white;
-   font-size: 14px;
-   text-align: center;
-   margin: 23px 0 0 0;
+      color: $white;
+      font-size: 14px;
+      text-align: center;
+      margin: 23px 20px 0 17px;
+
+      @include _845 {
+         font-size: 12px;
+      }
+      @include _760 {
+         margin: 2px 17px 0 17px;
+      }
+
+      @include _650 {
+         margin: 2px -93px;
+      }
+
+      @include _480 {
+         font-size: 12px;
+      }
    }
-}
-
-
-@media (max-width: 992px) {
-   .header-top__top{  
-   right: -207px;
-   }
-
-   .header-top .promoted {
-      padding: 0 23px;
-   }
-
-   .header-top__navigation {
-   width: 85%;
-   }
-
-   .header-top__login {
-   width: 15%;
-   padding: 0 120px 0 0;
-   }
-}
-
-@media (max-width: 805px) {
-   .header__column {
-      padding: 0 5px;
-   }
-}
-
-@media (max-width: 758px) {
-
-   .item-header {
-      padding: 8px 34px;
-   }
-
-   .item-header__title {
-      font-size: 27px;
-   }
-
-   .item-header__icon {
-      width: 25px;
-      height: 25px;
-      margin: 0 299px;
-   }
-
-   .item-header__text {
-      font-size: 12px;
-      margin: 13px 0 0 0;
-   }
-
-   .header__row {
-      flex-direction: column;
-   }
-
-
 }
