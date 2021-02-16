@@ -40,16 +40,15 @@
 						</div>
 						<div class="header-top__login">
 							<img src="images/dest/icon-login.png" alt="">
-							<div class="header-top__entrance">ВХОД</div>
+							<div class="header-top__entrance js-login">ВХОД</div>
 						</div>
 					</div>
 				</div>
 
 			</div>
-			<span class="header__mobile_btn">
-				<span><img src="images/dest/menu.png" alt=""></span>
-			</span>
+
 			<div class="header__info">
+
 				<div class="header__logo">
 					<img src="images/dest/BORODINSKI-logo.png" alt="">
 				</div>
@@ -124,14 +123,14 @@
 								</div>
 								<div class="swiper-pagination"></div>
 								<div class="nav">
-									<div class="swiper-button-prev"><a href="#" class='btn__large'>Назад</a></div>
+									<div class="swiper-button-prev"><a href="#" class='btn__large navigation'>Назад</a></div>
 									<div class="swiper-button-next"><a href="#" class='btn__large'>Вперед</a></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<img class='infoBlock__divider' src='images/dest/layer.png' alt=''>
+				<img class='infoBlock__divider first' src='images/dest/layer.png' alt=''>
 			</div>
 		</div>
 		<div class="infoBlock">
@@ -150,7 +149,7 @@
 							</p>
 						</div>
 						<div class="infoBlock__buttons">
-							<a href="contacts.html" class='btn__large'>Как проехать</a>
+							<a href="contacts.html" class='btn__large where'>Как проехать</a>
 							<a href="contacts.html" class='btn__large'>Обратная связь</a>
 						</div>
 					</div>
@@ -163,7 +162,7 @@
 						</div>
 						<form action="form">
 							<div class="holder">
-								<div class="holder__row">
+								<div class="holder__row where">
 									<div class="holder__column">
 										<input type="date" id="data" name="data" placeholder="ДАТА" class='input__data'>
 									</div>
@@ -186,33 +185,10 @@
 						</form>
 					</div>
 				</div>
-				<img class='infoBlock__divider' src='images/dest/layer.png' alt=''>
+				<img class='infoBlock__divider second' src='images/dest/layer3.png' alt=''>
 			</div>
 		</div>
-		<div class="modal">
-			<div class="modal__wrapper">
-				<div class="modal__window">
-					<h5 class="title--30">Личный кабинет</h5>
-					<p>
-						ВВедите пожалуйста свой логин и пароль
-						Если вы забыли пароль
-					</p>
-					<form class='form'>
-						<input type="text" name='login' placeholder="Логин" class='input__login'>
-						<input type="password" name='password' placeholder="Пароль" class='input__password'>
-						<div class="form__row">
-							<div class="form__column">
-								<input type="checkbox" id="remember" value="remember">
-								<label for="remember">Запомните меня</label>
-							</div>
-							<div class="form__column">
-								<a href="#">Я забыл пароль</a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+
 		<div class="footer">
 			<div class="footer__container">
 				<div class="footer__row">
@@ -248,6 +224,33 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="modal modal--login">
+			<div class="modal__wrapper">
+				<div class="modal__window">
+					<h5 class="title--30">Личный кабинет</h5>
+					<p>
+						ВВедите пожалуйста свой логин и пароль
+						Если вы забыли пароль
+					</p>
+					<form class='form'>
+						<input type="text" name='login' placeholder="Логин" class='input__login'>
+						<input type="password" name='password' placeholder="Пароль" class='input__password'>
+						<div class="form__row">
+							<div class="form__column">
+								<input type="checkbox" id="remember" value="remember">
+								<label for="remember">Запомните меня</label>
+							</div>
+							<div class="form__column">
+								<a href="#">Я забыл пароль</a>
+							</div>
+						</div>
+						<input class='btn__full-width' type="submit" value='Войти' name='login'>
+						<span class="modal__close"></span>
+					</form>
+				</div>
+
 			</div>
 		</div>
 	</div>

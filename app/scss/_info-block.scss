@@ -1,6 +1,6 @@
 .infoBlock {
    position: relative;
-   padding: 0 0 34px 0;
+   padding: 0 0 30px 0;
    @include _505 {
       padding: 0 0 3px 0;
    }
@@ -18,10 +18,11 @@
       background: $light_bg;
       max-width: 940px;
       margin: 0 auto;
-      padding: 52px 80px 54px;
+      padding: 52px 80px 53px;
       @include _960 {
          margin-left: 107px;
          width: 100%;
+         padding: 52px 80px 5px;
       }
       @include _845 {
          padding: 10px 5px;
@@ -42,7 +43,6 @@
       }
       &:first-child {
          margin-right: 90px;
-         text-align: center;
          @include _960 {
             margin-right: 0;
          }
@@ -59,7 +59,6 @@
    .col--51 {
       @include _960 {
          text-align: center;
-         margin: 33px 0 100px;
       }
       @include _760 {
          margin: 33px 0 10px;
@@ -74,16 +73,61 @@
       height: 64%;
       @include _960 {
          transform: rotate(90deg);
-         left: 61%;
-         top: 15%;
+      }
+   }
+
+   .first {
+      @include _960 {
+         left: 60%;
+         top: 10%;
+      }
+      @include _845 {
+         left: 62%;
+         top: 6%;
       }
       @include _760 {
-         display: none;
+         left: 65%;
+         top: 9%;
+      }
+      @include _505 {
+         left: 70%;
+         top: 11%;
+      }
+      @include _420 {
+         left: 76%;
+         top: 19%;
+         height: 48%;
+      }
+
+      @include _330 {
+         left: 81%;
+         top: 27%;
+         height: 37%;
+      }
+   }
+   .second {
+      @include _960 {
+         left: 61%;
+         top: 17%;
+      }
+      @include _760 {
+         left: 65%;
+         top: 19%;
+      }
+      @include _650 {
+         left: 68%;
+      }
+      @include _505 {
+         left: 72%;
+      }
+      @include _420 {
+         left: 76%;
+         top: 21%;
       }
    }
 
    .title--30 {
-      margin: 0px -21px 30px 0px;
+      margin: 0px -21px 35px 0px;
       @include _960 {
          font-size: 26px;
          margin: 0 0 15px 0;
@@ -131,7 +175,7 @@
    }
 
    &__box {
-      margin-bottom: 35px;
+      margin-bottom: 26px;
       @include _960 {
          margin-bottom: 14px;
       }
@@ -140,18 +184,23 @@
    &__buttons {
       display: flex;
       justify-content: space-between;
-      padding: 13px 0 0 0;
+      padding: 15px 0 0 0;
       @include _960 {
-         justify-content: space-evenly;
+         justify-content: center;
+         margin: 10px;
       }
-
+      .where {
+         @include _960 {
+            margin: 0 20px;
+         }
+      }
       @include _505 {
          padding: 2px 0 0 0;
       }
    }
 
    &__submit {
-      padding: 15px 0 0 0;
+      padding: 13px 0 0 0;
    }
 }
 
@@ -160,9 +209,13 @@
    justify-content: space-between;
    align-items: center;
    @include _960 {
-      justify-content: space-evenly;
+      justify-content: center;
    }
-
+   .where {
+      @include _960 {
+         margin: 0 20px;
+      }
+   }
    &__column {
       background: $light_bg;
       padding: 0 0 20px;

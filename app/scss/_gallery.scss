@@ -2,7 +2,8 @@
    padding: 0 0 0 90px;
 
    @include _960 {
-      margin-left: -48px;
+      margin-left: -69px;
+      margin-top: 73px;
    }
    @include _663 {
       margin-left: -67px;
@@ -12,42 +13,22 @@
    }
 
    .swiper-container-pointer-events {
-      padding: 20px 0;
+      padding: 5px 0;
+   }
+   .swiper-button-next:after,
+   .swiper-container-rtl .swiper-button-prev:after {
+      content: "";
+   }
+
+   .swiper-button-prev:after,
+   .swiper-container-rtl .swiper-button-next:after {
+      content: "";
    }
 
    .swiper-button-next,
    .swiper-button-prev {
       position: static;
-      color: $light_bg;
-
-      @include _960 {
-         position: absolute;
-      }
-   }
-   .swiper-button-next {
-      padding: 0 0 0 241px;
-      @include _960 {
-         margin: 60px 232px 0 0;
-      }
-      @include _663 {
-         margin: 60px 112px 0 0;
-      }
-      @include _480 {
-         margin: 60px 53px 0 0;
-      }
-   }
-
-   .swiper-button-prev {
-      padding: 76px 0px 0 82px;
-      @include _960 {
-         padding: 104px 0 0 249px;
-      }
-      @include _663 {
-         padding: 104px 0 0 132px;
-      }
-      @include _480 {
-         padding: 104px 0 0 74px;
-      }
+      display: inline;
    }
 
    .swiper-container btn {
@@ -55,6 +36,7 @@
    }
 
    .nav {
+      margin-top: 19px;
       @include _960 {
          height: 95px;
       }
@@ -63,6 +45,14 @@
    .btn__large {
       @include _760 {
          min-width: 80px;
+      }
+   }
+   .swiper-button-prev .btn__large {
+      margin-right: 17px;
+   }
+   @include _960 {
+      .swiper-button-prev .btn__large {
+         margin-right: 20px;
       }
    }
 }
